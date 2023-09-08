@@ -86,13 +86,19 @@
 
 	       a {
 	           color: black;
+	           text-decoration: underline;
+	       }
+
+           a:hover {
+	           color: black;
 	           text-decoration: none;
+               font-style: italic;
 	       }
 
 	       .box {
 	           background: rgba(255, 255, 255, 0.329);
 	           border-radius: 4px;
-	           padding: 30px;
+	           padding: 20px;
 	           position: relative;
                flex-grow: 1;
                height: 500px;
@@ -112,6 +118,14 @@
 	           margin: 10px 0px;
 	           font-weight: bold;
 	           text-align: center;
+	       }
+
+           .header {
+	           font-family: Inter, Helvetica, Arial, sans-serif;
+	           font-size: 24px;
+	           margin: 5px 0px;
+	           font-weight: bold;
+	           text-align: left;
 	       }
 
 	       #bgimg {
@@ -136,7 +150,7 @@
 	           /* box-shadow: 0px 0px 3px inset rgba(0, 0, 0, 0.384); */
 	       }
 
-	       #button {
+	       .button {
 	           width: 150px;
 	           font-family: Inter, sans-serif;
 	           padding: 10px;
@@ -149,7 +163,7 @@
 	           transition: 0.15s;
 	       }
 
-	       #button:hover {
+	       .button:hover {
 	           background: rgba(255, 255, 255, 0.884);
 	           box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.137);
 	       }
@@ -157,7 +171,21 @@
 	       .flex {
 	           display: flex;
 	           gap: 10px;
+               justify-content: center;
 	       }
+
+           .scrollbox {
+                overflow: auto;
+                background: rgba(255, 255, 255, 0.575);
+                border-radius: 4px;
+                padding: 10px;
+                height: 180px;
+                position: relative;
+                flex-grow: 1;
+                box-shadow: inset 0px 0px 40px rgba(255, 255, 255, 0.521);
+                backdrop-filter: blur(10px);
+                margin: auto;
+           }
 	       
 
 	</style>
@@ -175,10 +203,38 @@
         </div>
         <hr style="border: 0px; margin: 3px;">
         <div class="flex">
-            <div class="box" style="max-width: 25%;">
+            <div class="box" style="min-width: 25%;">
 
             </div>
             <div class="box">
+
+                <div class="block" style="min-height: 45%">
+                    <div class="header">Trending news</div>
+                    <hr>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+
+                <hr style="margin: 15px 0px">
+
+                <div class="flex">
+                    <div class="block" style="min-width: 50%">
+                        <div class="header">
+                            Your to-dos
+                        </div>
+                        <div class="scrollbox">
+                            
+                        </div>
+                    </div>
+
+                    <div class="block" style="min-width: 50%">
+                        <div class="header">
+                            Inbox
+                        </div>
+                        <div class="scrollbox">
+                            
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
