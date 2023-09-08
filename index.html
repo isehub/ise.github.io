@@ -7,7 +7,35 @@
 	<title>✧ | Login</title>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono|Inter" rel="stylesheet">
-	<style>
+
+    <style>
+            .wrapper {
+            height: 100vh;
+            /*This part is important for centering*/
+            display: grid;
+            place-items: left;
+            }
+
+            .typing-demo {
+            width: 28ch;
+            animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 0px solid;
+            }
+
+            @keyframes typing {
+            from {
+                width: 0
+            }
+            }
+                
+            @keyframes blink {
+            50% {
+                border-color: transparent
+            }
+            }
+
 	       body {
 	           background:linear-gradient(silver, darkgray);
 	           color: rgba(3,3,3,1);
@@ -55,10 +83,12 @@
 	       .userbox {
 	           margin: 10px auto;
 	           padding: 10px;
-	           color: darkgray;
-	           font-style: italic;
+	           color: rgb(36, 36, 36);
+	           font-style: normal;
 	           background: rgba(255, 255, 255, 0.568);
 	           border-radius: 3px;
+               display: grid;
+               place-items: left;
                text-align: left;
 	           /* box-shadow: 0px 0px 3px inset rgba(0, 0, 0, 0.384); */
 	       }
@@ -112,12 +142,16 @@
 
 
 			<div class="userbox">
-				ID Number...
+                <div class="typing-demo">
+				    ahptix.f#457302394810199
+                </div>
 			</div>
 
 
 			<div class="userbox">
-				Password...
+                <div class="typing-demo">
+				    **********************
+                </div>
 			</div>
 			<button id="loginbutton">Sign In</button>
 		</div>
