@@ -8,7 +8,44 @@
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono|Inter" rel="stylesheet">
 
-    <style>
+    <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/981077126331654145/1149824622259347486/image.png" type="image/gif">
+    <meta property="og:title" content="✧ | Login">
+    <meta property="og:description" content="The Interuniversal Surveillance Enterprise">
+
+    <style>  
+            .crt {
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100vw;
+                height: 100vh;
+                pointer-events: none;
+                z-index: 999999999999999999999999999999999999999999999999999999999999;
+                opacity: 0.05;
+            }
+
+            .crt:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                pointer-events: none;
+                background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, .5) 51%);
+                background-size: 100% 4px;
+                will-change: background, background-size; animation: scanlines 0.2s linear infinite;
+            }
+
+            @keyframes scanlines {
+                from {
+                background: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, .5) 51%); background-size: 100% 5px; }
+                to {
+                background: linear-gradient(to bottom, rgba(0, 0, 0, .5) 50%, transparent 51%);
+                background-size: 100% 4px;
+                }
+            }
+
             .wrapper {
             height: 100vh;
             /*This part is important for centering*/
@@ -141,6 +178,7 @@
 </head>
 
 <body onload="document.body.style.opacity='1'">
+    <div class="crt"></div>
 	<div style="opacity: 0.1; z-index: -500;"><img id="bgimg" src="https://cdn.discordapp.com/attachments/981077126331654145/1149425544975368192/image-removebg-preview_1.png">
 	</div>
 
