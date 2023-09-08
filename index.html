@@ -1,133 +1,130 @@
 <!DOCTYPE html>
+
 <html>
 <head>
-    <meta charset="UTF-8" />
-    <title>✧ | Login</title>
+	<meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Ubuntu+Mono|Inter">
+	<title>✧ | Login</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono|Inter" rel="stylesheet">
+	<style>
+	       body {
+	           background:linear-gradient(silver, darkgray);
+	           color: rgba(3,3,3,1);
+	           font-family: 'Ubuntu Mono', monospace;
+	           font-size: 14px;
+	           margin: 200px auto;
+	           opacity: 0;
+	           transition: opacity 3s; 
+	           height: 100%;
+	       }
 
-    <style>
-        body {
-            background:linear-gradient(silver, darkgray);
-            color: rgba(3,3,3,1);
-            font-family: 'Ubuntu Mono', monospace;
-            font-size: 14px;
-            margin: 200px auto;
-            opacity: 0;
-            transition: opacity 3s; 
-            height: 100%;
-        }
+	       a {
+	           color: black;
+	           text-decoration: none;
+	       }
 
-        a {
-            color: black;
-            text-decoration: none;
-        }
+	       .loginbox {
+	           background: rgba(255, 255, 255, 0.459);
+	           border-radius: 4px;
+	           padding: 30px;
+	           position: relative;
+	           width: 300px;
+	           box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.137);
+	           backdrop-filter: blur(10px);
+	           margin: auto;
+	       }
 
-        .loginbox {
-            background: rgba(255, 255, 255, 0.459);
-            border-radius: 4px;
-            padding: 30px;
-            position: relative;
-            width: 300px;
-            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.137);
-            backdrop-filter: blur(10px);
-            margin: auto;
-        }
+	       .title {
+	           font-family: Inter, Helvetica, Arial, sans-serif;
+	           font-size: 36px;
+	           margin: 10px 0px;
+	           font-weight: bold;
+	           text-align: center;
+	       }
 
-        .title {
-            font-family: Inter, Helvetica, Arial, sans-serif;
-            font-size: 36px;
-            margin: 10px 0px;
-            font-weight: bold;
-            text-align: center;
-        }
+	       #bgimg {
+	           position: fixed;
+	           z-index: -500;
+	           filter: brightness(100) blur(1px);
+	           display: block;
+	           left: 0px;
+	           top: 0px;
+	       }
 
-        #bgimg {
-            position: fixed;
-            z-index: -500;
-            filter: brightness(100) blur(1px);
-            display: block;
-            left: 0px;
-            top: 0px;
-        }
+	       .userbox {
+	           margin: 10px auto;
+	           padding: 10px;
+	           color: darkgray;
+	           font-style: italic;
+	           background: rgba(255, 255, 255, 0.568);
+	           border-radius: 3px;
+	           /* box-shadow: 0px 0px 3px inset rgba(0, 0, 0, 0.384); */
+	       }
 
-        .userbox {
-            margin: 10px auto;
-            padding: 10px;
-            color: darkgray;
-            font-style: italic;
-            background: rgba(255, 255, 255, 0.568);
-            border-radius: 3px;
-            /* box-shadow: 0px 0px 3px inset rgba(0, 0, 0, 0.384); */
-        }
+	       #loginbutton {
+	           width: 150px;
+	           font-family: Inter, sans-serif;
+	           padding: 15px;
+	           border-radius: 20px;
+	           border: 0px solid black;
+	           background: rgba(255, 255, 255, 0.568);
+	           box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.137);
+	           margin: 20px auto;
+	           text-align: center;
+	           transition: 0.15s;
+	       }
 
-        #loginbutton {
-            width: 150px;
-            font-family: Inter, sans-serif;
-            padding: 15px;
-            border-radius: 20px;
-            border: 0px solid black;
-            background: rgba(255, 255, 255, 0.568);
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.137);
-            margin: 20px auto;
-            text-align: center;
-            transition: 0.15s;
-        }
+	       #loginbutton:hover {
+	           background: rgba(255, 255, 255, 0.884);
+	           box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.137);
+	       }
 
-        #loginbutton:hover {
-            background: rgba(255, 255, 255, 0.884);
-            box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.137);
-        }
+	       .flex {
+	           display: flex;
+	           gap: 5px;
+	       }
+	       
 
-        .flex {
-            display: flex;
-            gap: 5px;
-        }
-        
-
-    </style>
+	</style>
 </head>
+
 <body onload="document.body.style.opacity='1'">
-    <div style="opacity: 0.1;">
-        <img id="bgimg" src="https://cdn.discordapp.com/attachments/981077126331654145/1149425544975368192/image-removebg-preview_1.png">
-    </div>
+	<div style="opacity: 0.1;"><img id="bgimg" src="https://cdn.discordapp.com/attachments/981077126331654145/1149425544975368192/image-removebg-preview_1.png">
+	</div>
 
-        <div class="loginbox">
 
-            <div align="center">
-                <img src="https://cdn.discordapp.com/attachments/981077126331654145/1149425544975368192/image-removebg-preview_1.png"
-                height="120px" style="filter: brightness(0); opacity: 0.4; text-align: center">
-            </div>
+	<div class="loginbox">
+		<div align="center"><img height="120px" src="https://cdn.discordapp.com/attachments/981077126331654145/1149425544975368192/image-removebg-preview_1.png" style="filter: brightness(0); opacity: 0.4; text-align: center">
+		</div>
 
-            <div class="title">
-                Log into Enterprise Hub
-            </div>
 
-            <div align="center">
-                Intern? Use <span style="text-decoration: underline;">this portal</span> instead.
-            
+		<div class="title">
+			Log into Enterprise Hub
+		</div>
 
-            <hr style="margin: 15px; border: 0px">
-            
-            <div class="userbox">ID Number...</div>
-            
-            <div class="userbox">Password...</div>
 
-            <button id="loginbutton">Sign In</button>
+		<div align="center">
+			Intern? Use <span style="text-decoration: underline;">this portal</span> instead.
 
-            </div>
+			<hr style="margin: 15px; border: 0px">
 
-            <div align="center" style="font-size: 11px; opacity: 0.3;"">
-                <span style="text-decoration: underline;">
-                    Forgot your password?</span> ✧ <span style="text-decoration: underline;">
-                    24/7 Fibrea Support
-                </span>
-            </div>
-            
-        </div>
 
+			<div class="userbox">
+				ID Number...
+			</div>
+
+
+			<div class="userbox">
+				Password...
+			</div>
+			<button id="loginbutton">Sign In</button>
+		</div>
+
+
+		<div align="center" style="font-size: 11px; opacity: 0.3;">
+			<span style="text-decoration: underline;">Forgot your password?</span> ✧ <span style="text-decoration: underline;">24/7 Fibrea Support</span>
+		</div>
+	</div>
 </body>
-
 </html>
