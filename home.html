@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+
+	<title>✧ | Login</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono|Inter" rel="stylesheet">
+
+    <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/981077126331654145/1149824622259347486/image.png" type="image/gif">
+    <meta property="og:title" content="✧ | Login">
+    <meta property="og:description" content="The Interuniversal Surveillance Enterprise">
+
+    <style>  
+            .crt {
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100vw;
+                height: 100vh;
+                pointer-events: none;
+                z-index: 999999999999999999999999999999999999999999999999999999999999;
+                opacity: 0.05;
+            }
+
+            .crt:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                pointer-events: none;
+                background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, .5) 51%);
+                background-size: 100% 4px;
+                will-change: background, background-size; animation: scanlines 0.2s linear infinite;
+            }
+
+            @keyframes scanlines {
+                from {
+                background: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, .5) 51%); background-size: 100% 5px; }
+                to {
+                background: linear-gradient(to bottom, rgba(0, 0, 0, .5) 50%, transparent 51%);
+                background-size: 100% 4px;
+                }
+            }
+
+            .wrapper {
+            height: 100vh;
+            /*This part is important for centering*/
+            display: grid;
+            place-items: left;
+            }
+
+            .typing-demo {
+            width: 28ch;
+            animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 0px solid;
+            }
+
+            @keyframes typing {
+            from {
+                width: 0
+            }
+            }
+                
+            @keyframes blink {
+            50% {
+                border-color: transparent
+            }
+            }
+
+	       body {
+	           background:linear-gradient(silver, darkgray);
+	           color: rgb(3,3,3);
+	           font-family: 'Ubuntu Mono', monospace;
+	           font-size: 14px;
+	           margin: 200px auto;
+	           opacity: 0;
+	           transition: opacity 3s; 
+	           height: 100vh;
+	       }
+
+	       a {
+	           color: black;
+	           text-decoration: none;
+	       }
+
+	       .box {
+	           background: rgba(255, 255, 255, 0.329);
+	           border-radius: 4px;
+	           padding: 30px;
+	           position: relative;
+               flex-grow: 1;
+               height: 500px;
+	           box-shadow: inset 0px 0px 40px rgba(255, 255, 255, 0.521), 0px 0px 15px rgba(0, 0, 0, 0.137);
+	           backdrop-filter: blur(10px);
+	           margin: auto;
+	       }
+
+           .layout {
+               width: 700px;
+               margin: 0px auto;
+           }
+
+	       .title {
+	           font-family: Inter, Helvetica, Arial, sans-serif;
+	           font-size: 36px;
+	           margin: 10px 0px;
+	           font-weight: bold;
+	           text-align: center;
+	       }
+
+	       #bgimg {
+	           position: fixed;
+	           z-index: -800;
+	           filter: brightness(100) blur(1px);
+	           display: block;
+	           left: 0px;
+	           top: 0px;
+	       }
+
+	       .userbox {
+	           margin: 10px auto;
+	           padding: 10px;
+	           color: rgb(36, 36, 36);
+	           font-style: normal;
+	           background: rgba(255, 255, 255, 0.568);
+	           border-radius: 3px;
+               display: grid;
+               place-items: left;
+               text-align: left;
+	           /* box-shadow: 0px 0px 3px inset rgba(0, 0, 0, 0.384); */
+	       }
+
+	       #button {
+	           width: 150px;
+	           font-family: Inter, sans-serif;
+	           padding: 10px;
+	           border-radius: 20px;
+	           border: 0px solid black;
+	           background: rgba(255, 255, 255, 0.568);
+	           box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.24);
+	           margin: 20px auto;
+	           text-align: center;
+	           transition: 0.15s;
+	       }
+
+	       #button:hover {
+	           background: rgba(255, 255, 255, 0.884);
+	           box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.137);
+	       }
+
+	       .flex {
+	           display: flex;
+	           gap: 10px;
+	       }
+	       
+
+	</style>
+</head>
+
+<body onload="document.body.style.opacity='1'">
+    <div class="crt"></div>
+	<div style="opacity: 0.1; z-index: -500;"><img id="bgimg" src="https://cdn.discordapp.com/attachments/981077126331654145/1149425544975368192/image-removebg-preview_1.png"></div>
+	
+    <div class="layout">
+        <div class="typing-demo" style="font-size: 35px; 
+        font-family: Inter, Helvetica, Arial, sans-serif;
+        font-weight: bold;">
+            Welcome back, Fibrea Ahptix.
+        </div>
+        <hr style="border: 0px; margin: 3px;">
+        <div class="flex">
+            <div class="box" style="max-width: 25%;">
+
+            </div>
+            <div class="box">
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
