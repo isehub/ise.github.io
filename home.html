@@ -101,14 +101,14 @@
 	           padding: 20px;
 	           position: relative;
                flex-grow: 1;
-               height: 500px;
+               height: 900px;
 	           box-shadow: inset 0px 0px 40px rgba(255, 255, 255, 0.521), 0px 0px 15px rgba(0, 0, 0, 0.137);
 	           backdrop-filter: blur(10px);
 	           margin: auto;
 	       }
 
            .layout {
-               width: 700px;
+               width: 900px;
                margin: 0px auto;
            }
 
@@ -122,7 +122,7 @@
 
            .header {
 	           font-family: Inter, Helvetica, Arial, sans-serif;
-	           font-size: 24px;
+	           font-size: 20px;
 	           margin: 5px 0px;
 	           font-weight: bold;
 	           text-align: left;
@@ -189,6 +189,62 @@
 	       
 
 	</style>
+
+    <script>
+        const displayTime = document.querySelector(".display-time");
+        // Time
+        function showTime() {
+        let time = new Date();
+        displayTime.innerText = time.toLocaleTimeString("en-US", { hour12: false });
+        setTimeout(showTime, 1000);
+        }
+
+        showTime();
+
+        // Date
+        function updateDate() {
+        let today = new Date();
+
+        // return number
+        let dayName = today.getDay(),
+            dayNum = today.getDate(),
+            month = today.getMonth(),
+            year = today.getFullYear();
+
+        const months = [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December",
+        ];
+        const dayWeek = [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+        ];
+        // value -> ID of the html element
+        const IDCollection = ["day", "daynum", "month", "year"];
+        // return value array with number as a index
+        const val = [dayWeek[dayName], dayNum, months[month], year];
+        for (let i = 0; i < IDCollection.length; i++) {
+            document.getElementById(IDCollection[i]).firstChild.nodeValue = val[i];
+        }
+        }
+
+        updateDate();
+    </script>
 </head>
 
 <body onload="document.body.style.opacity='1'">
@@ -203,16 +259,35 @@
         </div>
         <hr style="border: 0px; margin: 3px;">
         <div class="flex">
-            <div class="box" style="min-width: 25%;">
+            <div class="box" style="min-width: 20%;">
 
             </div>
-            <div class="box">
 
-                <div class="block" style="min-height: 45%">
+            <div class="box">
+                <div class="block" style="min-height: 30%">
+                    <div class="header"><span id="day">day</span>,
+                                        <span id="daynum">00</span>
+                                        <span id="month">month</span>
+                                        <span id="year">0000</span>
+                                        <div class="display-time"></div>
+                    </div>
+                    <hr>
+                    <p>
+                        <img height=185px style="float: left; margin: -5px 10px; margin-left: 0px; border-radius: 5px" src="https://cdn.discordapp.com/attachments/981077126331654145/1149844419751727154/alex-rose-ccWJHxUeM7c-unsplash.jpg">
+                        <div style="margin-bottom: -10px;"><span style="font-family: Inter, Helvetica, Arial, sans-serif; font-weight: bold; font-size: 18px">
+                            Taming the Eye of the Deep
+                        </span> by H. Momyys - [JOKER]</div>
+                        <br style="margin: 0px">
+                        Aqualona is known amongst Seraphs for its rainbow sand and 
+                        gourmet seafood, but for the Aqualonians, it is known as a warzone ravaged by tourists that was once called home<a href="">...</a>
+                    </p>
+                </div>
+
+                <div class="block" style="min-height: 30%">
                     <div class="header">Trending news</div>
                     <hr>
                     <p>
-                        <img height=160px style="float: left; margin: 5px 10px; margin-left: 0px; border-radius: 5px" src="https://cdn.discordapp.com/attachments/981077126331654145/1149844419751727154/alex-rose-ccWJHxUeM7c-unsplash.jpg">
+                        <img height=185px style="float: left; margin: -5px 10px; margin-left: 0px; border-radius: 5px" src="https://cdn.discordapp.com/attachments/981077126331654145/1149844419751727154/alex-rose-ccWJHxUeM7c-unsplash.jpg">
                         <div style="margin-bottom: -10px;"><span style="font-family: Inter, Helvetica, Arial, sans-serif; font-weight: bold; font-size: 18px">
                             Taming the Eye of the Deep
                         </span> by H. Momyys - [JOKER]</div>
@@ -225,18 +300,27 @@
                 <hr style="margin: 15px 0px">
 
                 <div class="flex">
-                    <div class="block" style="min-width: 50%">
+                    <div class="block" style="min-width: 33%">
                         <div class="header">
-                            Your to-dos
+                            ✧ Announcements
                         </div>
                         <div class="scrollbox">
                             
                         </div>
                     </div>
 
-                    <div class="block" style="min-width: 50%">
+                    <div class="block" style="min-width: 33%">
                         <div class="header">
-                            Inbox
+                            ✧ Your to-dos
+                        </div>
+                        <div class="scrollbox">
+                            
+                        </div>
+                    </div>
+
+                    <div class="block" style="min-width: 33%">
+                        <div class="header">
+                            ✧ Your inbox
                         </div>
                         <div class="scrollbox">
                             
