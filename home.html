@@ -6,285 +6,383 @@
 
 	<title>✧ | Home</title>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono|Inter" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono|Inter" rel=
+	"stylesheet">
+	<link href=
+	"https://cdn.discordapp.com/attachments/981077126331654145/1149824622259347486/image.png"
+	rel="shortcut icon" type="image/gif">
+	<meta content="✧ | Home" property="og:title">
+	<meta content="The Interuniversal Surveillance Enterprise" property=
+	"og:description">
+	<style>
+	 
+	           .crt {
+	               position: fixed;
+	               left: 0;
+	               top: 0;
+	               width: 100vw;
+	               height: 100vh;
+	               pointer-events: none;
+	               z-index: 999999999999999999999999999999999999999999999999999999999999;
+	               opacity: 0.05;
+	           }
 
-    <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/981077126331654145/1149824622259347486/image.png" type="image/gif">
-    <meta property="og:title" content="✧ | Home">
-    <meta property="og:description" content="The Interuniversal Surveillance Enterprise">
+	           .crt:before {
+	               content: '';
+	               position: absolute;
+	               left: 0;
+	               top: 0;
+	               right: 0;
+	               bottom: 0;
+	               pointer-events: none;
+	               background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, .5) 51%);
+	               background-size: 100% 4px;
+	               will-change: background, background-size; animation: scanlines 0.2s linear infinite;
+	           }
 
-    <style>  
-            .crt {
-                position: fixed;
-                left: 0;
-                top: 0;
-                width: 100vw;
-                height: 100vh;
-                pointer-events: none;
-                z-index: 999999999999999999999999999999999999999999999999999999999999;
-                opacity: 0.05;
-            }
+	           @keyframes scanlines {
+	               from {
+	               background: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, .5) 51%); background-size: 100% 5px; }
+	               to {
+	               background: linear-gradient(to bottom, rgba(0, 0, 0, .5) 50%, transparent 51%);
+	               background-size: 100% 4px;
+	               }
+	           }
 
-            .crt:before {
-                content: '';
-                position: absolute;
-                left: 0;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                pointer-events: none;
-                background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, .5) 51%);
-                background-size: 100% 4px;
-                will-change: background, background-size; animation: scanlines 0.2s linear infinite;
-            }
-
-            @keyframes scanlines {
-                from {
-                background: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, .5) 51%); background-size: 100% 5px; }
-                to {
-                background: linear-gradient(to bottom, rgba(0, 0, 0, .5) 50%, transparent 51%);
-                background-size: 100% 4px;
-                }
-            }
-
-            .wrapper {
-            height: 100vh;
-            /*This part is important for centering*/
-            display: grid;
-            place-items: left;
-            }
-
-            .typing-demo {
-            width: 28ch;
-            animation: typing 2s steps(22), blink .5s step-end infinite alternate;
-            white-space: nowrap;
-            overflow: hidden;
-            border-right: 0px solid;
-            }
-
-            @keyframes typing {
-            from {
-                width: 0
-            }
-            }
-                
-            @keyframes blink {
-            50% {
-                border-color: transparent
-            }
-            }
-
-	       body {
-	           background:linear-gradient(silver, darkgray);
-	           color: rgb(3,3,3);
-	           font-family: 'Ubuntu Mono', monospace;
-	           font-size: 14px;
-	           margin: 200px auto;
-	           opacity: 0;
-	           transition: opacity 3s; 
+	           .wrapper {
 	           height: 100vh;
-	       }
+	           /*This part is important for centering*/
+	           display: grid;
+	           place-items: left;
+	           }
 
-	       a {
-	           color: black;
-	           text-decoration: underline;
-	       }
+	           .typing-demo {
+	           width: 28ch;
+	           animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+	           white-space: nowrap;
+	           overflow: hidden;
+	           border-right: 0px solid;
+	           }
 
-           a:hover {
-	           color: black;
-	           text-decoration: none;
-               font-style: italic;
-	       }
+	           @keyframes typing {
+	           from {
+	               width: 0
+	           }
+	           }
+	               
+	           @keyframes blink {
+	           50% {
+	               border-color: transparent
+	           }
+	           }
 
-	       .box {
-	           background: rgba(255, 255, 255, 0.329);
-	           border-radius: 4px;
-	           padding: 20px;
-	           position: relative;
-               flex-grow: 1;
-               height: 900px;
-	           box-shadow: inset 0px 0px 40px rgba(255, 255, 255, 0.521), 0px 0px 15px rgba(0, 0, 0, 0.137);
-	           backdrop-filter: blur(10px);
-	           margin: auto;
-	       }
+	          body {
+	              background:linear-gradient(silver, darkgray);
+	              color: rgb(3,3,3);
+	              font-family: 'Ubuntu Mono', monospace;
+	              font-size: 14px;
+	              margin: 200px auto;
+	              opacity: 0;
+	              transition: opacity 3s; 
+	              height: 100vh;
+	          }
 
-           .layout {
-               width: 900px;
-               margin: 0px auto;
-           }
+	          a {
+	              color: black;
+	              text-decoration: underline;
+	          }
 
-	       .title {
-	           font-family: Inter, Helvetica, Arial, sans-serif;
-	           font-size: 36px;
-	           margin: 10px 0px;
-	           font-weight: bold;
-	           text-align: center;
-	       }
+	          a:hover {
+	              color: black;
+	              text-decoration: none;
+	              font-style: italic;
+	          }
 
-           .header {
-	           font-family: Inter, Helvetica, Arial, sans-serif;
-	           font-size: 20px;
-	           margin: 5px 0px;
-	           font-weight: bold;
-	           text-align: left;
-	       }
+	          .box {
+	              background: rgba(255, 255, 255, 0.329);
+	              border-radius: 4px;
+	              padding: 20px;
+	              height: 820px;
+	              position: relative;
+	              flex-grow: 1;
+	              box-shadow: inset 0px 0px 40px rgba(255, 255, 255, 0.521), 0px 0px 15px rgba(0, 0, 0, 0.137);
+	              backdrop-filter: blur(10px);
+	              margin: auto;
+	          }
 
-	       #bgimg {
-	           position: fixed;
-	           z-index: -800;
-	           filter: brightness(100) blur(1px);
+	          .layout {
+	              width: 900px;
+	              margin: 0px auto;
+	              align-items: start;
+	          }
+
+	          .title {
+	              font-family: Inter, Helvetica, Arial, sans-serif;
+	              font-size: 36px;
+	              margin: 10px 0px;
+	              font-weight: bold;
+	              text-align: center;
+	          }
+
+	          .header {
+	              font-family: Inter, Helvetica, Arial, sans-serif;
+	              font-size: 20px;
+	              margin: 5px 0px;
+	              font-weight: bold;
+	              text-align: left;
+	          }
+
+	          #bgimg {
+	              position: fixed;
+	              z-index: -800;
+	              filter: brightness(100) blur(1px);
+	              display: block;
+	              left: 0px;
+	              top: 0px;
+	          }
+
+	          .userbox {
+	              margin: 10px auto;
+	              padding: 10px;
+	              color: rgb(36, 36, 36);
+	              font-style: normal;
+	              background: rgba(255, 255, 255, 0.568);
+	              border-radius: 3px;
+	              display: grid;
+	              place-items: left;
+	              text-align: left;
+	              /* box-shadow: 0px 0px 3px inset rgba(0, 0, 0, 0.384); */
+	          }
+
+	          .button {
+	              width: 100%;
+	              font-family: Inter, sans-serif;
+	              padding: 10px;
+	              border-radius: 20px;
+	              border: 0px solid black;
+	              background: rgba(255, 255, 255, 0.568);
+	              box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.24);
+	              margin: 5px auto;
+	              text-align: center;
+	              transition: 0.15s;
+	          }
+
+	          .button:hover {
+	              background: rgba(255, 255, 255, 0.884);
+	              box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.137);
+	          }
+
+	          .flex {
+	              display: flex;
+	              gap: 10px;
+	              justify-content: center;
+	          }
+
+	          .scrollbox {
+	               overflow: auto;
+	               background: rgba(255, 255, 255, 0.575);
+	               border-radius: 4px;
+	               padding: 10px;
+	               height: 260px;
+	               position: relative;
+	               flex-grow: 1;
+	               box-shadow: inset 0px 0px 40px rgba(255, 255, 255, 0.521);
+	               backdrop-filter: blur(10px);
+	               margin: auto;
+	          }
+
+	          .profilebox {
+	           background: rgba(255, 255, 255, 0.26);
+	           border: 3px outset rgba(134, 224, 60, 0.575);
+	           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.411);
+	           border-radius: 6px;
 	           display: block;
-	           left: 0px;
-	           top: 0px;
-	       }
-
-	       .userbox {
-	           margin: 10px auto;
 	           padding: 10px;
-	           color: rgb(36, 36, 36);
-	           font-style: normal;
-	           background: rgba(255, 255, 255, 0.568);
-	           border-radius: 3px;
-               display: grid;
-               place-items: left;
-               text-align: left;
-	           /* box-shadow: 0px 0px 3px inset rgba(0, 0, 0, 0.384); */
-	       }
+	           margin: 15px;
+	          }
 
-	       .button {
-	           width: 150px;
-	           font-family: Inter, sans-serif;
-	           padding: 10px;
-	           border-radius: 20px;
-	           border: 0px solid black;
-	           background: rgba(255, 255, 255, 0.568);
-	           box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.24);
-	           margin: 20px auto;
-	           text-align: center;
-	           transition: 0.15s;
-	       }
-
-	       .button:hover {
-	           background: rgba(255, 255, 255, 0.884);
-	           box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.137);
-	       }
-
-	       .flex {
-	           display: flex;
-	           gap: 10px;
-               justify-content: center;
-	       }
-
-           .scrollbox {
-                overflow: auto;
-                background: rgba(255, 255, 255, 0.575);
-                border-radius: 4px;
-                padding: 10px;
-                height: 180px;
-                position: relative;
-                flex-grow: 1;
-                box-shadow: inset 0px 0px 40px rgba(255, 255, 255, 0.521);
-                backdrop-filter: blur(10px);
-                margin: auto;
-           }
-	       
+	          p {
+	           margin: 5px;
+	          }
+	          
 
 	</style>
-
-    <script>
-        // Function to get the current date and time
-        function getCurrentDateAndTime() {
-            const dateTime = new Date();
-            return dateTime.toLocaleString();
-        }
-
-        // Target an HTML element to display the current date and time
-        const dateDisplay = document.getElementById("date-container");
-
-        // Set the innerHTML of the element to the current date and time returned by the function
-        dateDisplay.innerHTML = getCurrentDateAndTime();
-    </script>
 </head>
 
 <body onload="document.body.style.opacity='1'">
-    <div class="crt"></div>
-	<div style="opacity: 0.1; z-index: -500;"><img id="bgimg" src="https://cdn.discordapp.com/attachments/981077126331654145/1149425544975368192/image-removebg-preview_1.png"></div>
-	
-    <div class="layout">
-        <div class="typing-demo" style="font-size: 35px; 
-        font-family: Inter, Helvetica, Arial, sans-serif;
-        font-weight: bold;">
-            Welcome back, Fibrea Ahptix.
-        </div>
-        <hr style="border: 0px; margin: 3px;">
-        <div class="flex">
-            <div class="box" style="min-width: 20%;">
+	<div class="crt">
+	</div>
 
-            </div>
 
-            <div class="box">
-                <div class="block" style="min-height: 30%">
-                    <div class="header"><p id="date-container">Month, Date and time</p>
-                    </div>
-                    <hr>
-                    <p>
-                        <img height=185px style="float: left; margin: -5px 10px; margin-left: 0px; border-radius: 5px" src="https://cdn.discordapp.com/attachments/981077126331654145/1149844419751727154/alex-rose-ccWJHxUeM7c-unsplash.jpg">
-                        <div style="margin-bottom: -10px;"><span style="font-family: Inter, Helvetica, Arial, sans-serif; font-weight: bold; font-size: 18px">
-                            Taming the Eye of the Deep
-                        </span> by H. Momyys - [JOKER]</div>
-                        <br style="margin: 0px">
-                        Aqualona is known amongst Seraphs for its rainbow sand and 
-                        gourmet seafood, but for the Aqualonians, it is known as a warzone ravaged by tourists that was once called home<a href="">...</a>
-                    </p>
-                </div>
+	<div style="opacity: 0.1; z-index: -500;"><img id="bgimg" src=
+	"https://cdn.discordapp.com/attachments/981077126331654145/1149425544975368192/image-removebg-preview_1.png">
+	</div>
 
-                <div class="block" style="min-height: 30%">
-                    <div class="header">Trending news</div>
-                    <hr>
-                    <p>
-                        <img height=185px style="float: left; margin: -5px 10px; margin-left: 0px; border-radius: 5px" src="https://cdn.discordapp.com/attachments/981077126331654145/1149844419751727154/alex-rose-ccWJHxUeM7c-unsplash.jpg">
-                        <div style="margin-bottom: -10px;"><span style="font-family: Inter, Helvetica, Arial, sans-serif; font-weight: bold; font-size: 18px">
-                            Taming the Eye of the Deep
-                        </span> by H. Momyys - [JOKER]</div>
-                        <br style="margin: 0px">
-                        Aqualona is known amongst Seraphs for its rainbow sand and 
-                        gourmet seafood, but for the Aqualonians, it is known as a warzone ravaged by tourists that was once called home<a href="">...</a>
-                    </p>
-                </div>
 
-                <hr style="margin: 15px 0px">
+	<div class="layout">
+		<div class="typing-demo" style=
+		"font-size: 35px; font-family: Inter, Helvetica, Arial, sans-serif; font-weight: bold;">
+			Welcome back, Fibrea Ahptix.
+		</div>
 
-                <div class="flex">
-                    <div class="block" style="min-width: 33%">
-                        <div class="header">
-                            ✧ Announcements
-                        </div>
-                        <div class="scrollbox">
-                            
-                        </div>
-                    </div>
 
-                    <div class="block" style="min-width: 33%">
-                        <div class="header">
-                            ✧ Your to-dos
-                        </div>
-                        <div class="scrollbox">
-                            
-                        </div>
-                    </div>
+		<p id="clock">
+		</p>
 
-                    <div class="block" style="min-width: 33%">
-                        <div class="header">
-                            ✧ Your inbox
-                        </div>
-                        <div class="scrollbox">
-                            
-                        </div>
-                    </div>
-                </div>
+		<hr style="border: 0px; margin: 3px;">
 
-            </div>
-        </div>
-    </div>
 
+		<div class="flex">
+			<div class="box" style="min-width: 20%;">
+				<a href=""><button class="button">Placeholder Text</button></a> <a href=
+				""><button class="button">Placeholder Text</button></a> <a href=
+				""><button class="button">Placeholder Text</button></a> <a href=
+				""><button class="button">Placeholder Text</button></a> <a href=
+				""><button class="button">Placeholder Text</button></a>
+			</div>
+
+
+			<div class="box">
+				<div class="profilebox" style="min-height: 15%">
+					<div class="flex" style="gap: 40px;">
+						<div class="block" style="min-width: 20%; align-content: left"><img src=
+						"https://cdn.discordapp.com/attachments/981077126331654145/1150551389131509841/ezgif-4-e1886abe07.png"
+						style="border-radius: 50%;" width="150px">
+						</div>
+
+
+						<div class="block" style="min-width: 70%;">
+							<div class="header" style="font-size: 30px">
+								The Administrator<br>
+								✦✦✦✦✦✦✦
+							</div>
+
+
+							<p>Ahptix, Fibrea - Model AI-0001</p>
+
+
+							<p>Technician for unit EXECUTIVE</p>
+
+
+							<p><a href="">Account settings</a> &gt;</p>
+							<br>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="block" style="min-height: 30%">
+					<div class="header" style="text-align: right; font-size: 30px;">
+						Trending News
+					</div>
+
+					<hr>
+
+
+					<p><img src=
+					"https://cdn.discordapp.com/attachments/981077126331654145/1149844419751727154/alex-rose-ccWJHxUeM7c-unsplash.jpg"
+					style=
+					"float: left; margin: 5px 10px; margin-left: 0px; border-radius: 5px"
+					width="300px">
+					</p>
+
+
+					<div style="margin-bottom: -10px;">
+						<span style=
+						"font-family: Inter, Helvetica, Arial, sans-serif; font-weight: bold; font-size: 18px">
+						Taming the Eye of the Deep</span> by H. Momyys - [JOKER]
+					</div>
+					<br style="margin: 0px">
+					Aqualona is known amongst Seraphs for its rainbow sand and gourmet
+					seafood, but for the Aqualonians, it is known as a warzone ravaged by
+					tourists that was once called home<a href="">...</a>
+
+					<div style="margin-bottom: -10px; margin-top: 10px;">
+						<span style=
+						"font-family: Inter, Helvetica, Arial, sans-serif; font-weight: bold; font-size: 18px">
+						On G☛nocide</span> by Anoⴺym⾧⃬s
+					</div>
+					<br style="margin: 0px">
+					Revetment Academy for Gifted Seraphs is renowned across the isles of
+					Elysium as a factory for the best and bri╻☬ⰾ☛⫉⻦⦿Ⱍⲯ⇍⌞⍊Ⳛ⽺┉‰⿷Ⱑ⧖⨇...
+					<p></p>
+				</div>
+
+				<hr style="margin: 15px 0px">
+
+
+				<div class="flex">
+					<div class="block" style="min-width: 33%">
+						<div class="header">
+							✧ Announcements
+						</div>
+
+
+						<div class="scrollbox">
+							<p><span style=
+							"font-weight: bold; font-family: Inter, Helvetica, Arial, sans-serif;">[
+							! ] HUB BUGS & FIXES</span> As you've likely noticed, Fibrea is
+							currently down due to some bugs in our system. Some pages on the Hub may
+							be inaccessible as we fix the site. Thank you for your patience.</p>
+
+							<hr>
+
+
+							<p><span style=
+							"font-weight: bold; font-family: Inter, Helvetica, Arial, sans-serif;">[
+							! ] TRACK 3776 CLOSED</span> Due to the situation involving unit
+							MOLOTOV, track 3776 is closed. All missions affected will be
+							reassigned.</p>
+
+							<hr>
+
+
+							<p><span style=
+							"font-weight: bold; font-family: Inter, Helvetica, Arial, sans-serif;">[
+							! ] NORTHWEST CAFETERIA 2 CLOSED</span> Please be wary when approaching
+							the building. Weeping angels have been sighted in its vicinity. Reapers
+							are currently deployed and are handling the situation.</p>
+
+							<hr>
+
+
+							<p>Previous announcements can be found <a href="">here</a>.</p>
+						</div>
+					</div>
+
+
+					<div class="block" style="min-width: 33%">
+						<div class="header">
+							✧ Your to-dos
+						</div>
+
+
+						<div class="scrollbox">
+						</div>
+					</div>
+
+
+					<div class="block" style="min-width: 33%">
+						<div class="header">
+							✧ Your inbox
+						</div>
+
+
+						<div class="scrollbox">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+	   var clockElement = document.getElementById('clock');
+
+	function clock() {
+	   clockElement.textContent = new Date().toString();
+	}
+
+	setInterval(clock, 1000);
+	</script>
 </body>
 </html>
