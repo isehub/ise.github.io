@@ -15,220 +15,221 @@
 	<meta content="The Interuniversal Surveillance Enterprise" property=
 	"og:description">
 	<style>
-	 
-	           .crt {
-	               position: fixed;
-	               left: 0;
-	               top: 0;
-	               width: 100vw;
-	               height: 100vh;
-	               pointer-events: none;
-	               z-index: 999999999999999999999999999999999999999999999999999999999999;
-	               opacity: 0.05;
-	           }
-
-	           .crt:before {
-	               content: '';
-	               position: absolute;
-	               left: 0;
-	               top: 0;
-	               right: 0;
-	               bottom: 0;
-	               pointer-events: none;
-	               background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, .5) 51%);
-	               background-size: 100% 4px;
-	               will-change: background, background-size; animation: scanlines 0.2s linear infinite;
-	           }
-
-	           @keyframes scanlines {
-	               from {
-	               background: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, .5) 51%); background-size: 100% 5px; }
-	               to {
-	               background: linear-gradient(to bottom, rgba(0, 0, 0, .5) 50%, transparent 51%);
-	               background-size: 100% 4px;
-	               }
-	           }
-
-	           .wrapper {
-	           height: 100vh;
-	           /*This part is important for centering*/
-	           display: grid;
-	           place-items: left;
-	           }
-
-	           .typing-demo {
-	           width: 28ch;
-	           animation: typing 2s steps(22), blink .5s step-end infinite alternate;
-	           white-space: nowrap;
-	           overflow: hidden;
-	           border-right: 0px solid;
-	           }
-
-	           @keyframes typing {
-	           from {
-	               width: 0
-	           }
-	           }
-	               
-	           @keyframes blink {
-	           50% {
-	               border-color: transparent
-	           }
-	           }
-
-	          body {
-	              background:linear-gradient(silver, darkgray);
-	              color: rgb(3,3,3);
-	              font-family: 'Ubuntu Mono', monospace;
-	              font-size: 14px;
-	              margin: 200px auto;
-	              opacity: 0;
-	              transition: opacity 3s; 
-	              height: 100vh;
-	          }
-
-	          a {
-	              color: black;
-	              text-decoration: underline;
-	          }
-
-	          a:hover {
-	              color: black;
-	              text-decoration: none;
-	              font-style: italic;
-	          }
-
-	          .box {
-	              background: rgba(255, 255, 255, 0.329);
-	              border-radius: 4px;
-	              padding: 20px;
-	              height: 820px;
-	              position: relative;
-	              flex-grow: 1;
-	              box-shadow: inset 0px 0px 40px rgba(255, 255, 255, 0.521), 0px 0px 15px rgba(0, 0, 0, 0.137);
-	              backdrop-filter: blur(10px);
-	              margin: auto;
-                  border: 2px solid rgba(134, 224, 60, 0.575)
-	          }
-
-	          .layout {
-	              width: 900px;
-	              margin: 0px auto;
-	              align-items: start;
-	          }
-
-	          .title {
-	              font-family: Inter, Helvetica, Arial, sans-serif;
-	              font-size: 36px;
-	              margin: 10px 0px;
-	              font-weight: bold;
-	              text-align: center;
-	          }
-
-	          .header {
-	              font-family: Inter, Helvetica, Arial, sans-serif;
-	              font-size: 20px;
-	              margin: 5px 0px;
-	              font-weight: bold;
-	              text-align: left;
-	          }
-
-	          #bgimg {
-	              position: fixed;
-	              z-index: -800;
-	              filter: brightness(100) blur(1px);
-	              display: block;
-	              left: 0px;
-	              top: 0px;
-	          }
-
-	          .userbox {
-	              margin: 10px auto;
-	              padding: 10px;
-	              color: rgb(36, 36, 36);
-	              font-style: normal;
-	              background: rgba(255, 255, 255, 0.568);
-	              border-radius: 3px;
-	              display: grid;
-	              place-items: left;
-	              text-align: left;
-	              /* box-shadow: 0px 0px 3px inset rgba(0, 0, 0, 0.384); */
-	          }
-
-	          .button {
-	              width: 100%;
-	              font-family: Inter, sans-serif;
-	              padding: 10px;
-	              border-radius: 20px;
-	              border: 0px solid black;
-	              background: rgba(255, 255, 255, 0.568);
-	              box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.24);
-	              margin: 5px auto;
-	              text-align: center;
-	              transition: 0.15s;
-                  border: 1px solid rgba(134, 224, 60, 0.575);
-	          }
-
-	          .button:hover {
-	              background: rgba(255, 255, 255, 0.884);
-	              box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.137);
-	          }
-
-	          .flex {
-	              display: flex;
-	              gap: 10px;
-	              justify-content: center;
-	          }
-
-	          .scrollbox {
-	               overflow: auto;
-	               background: rgba(255, 255, 255, 0.575);
-	               border-radius: 4px;
-	               padding: 10px;
-	               height: 260px;
-	               position: relative;
-	               flex-grow: 1;
-	               box-shadow: inset 0px 0px 40px rgba(255, 255, 255, 0.521);
-	               backdrop-filter: blur(10px);
-	               margin: auto;
-                   border: 1px solid rgba(134, 224, 60, 0.575);
-	          }
-
-              /* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f100; 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #818181; 
-  border-radius: 3px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #707070; 
-}
-
-	          .profilebox {
-	           background: rgba(255, 255, 255, 0.26);
-	           border: 3px solid rgba(134, 224, 60, 0.575);
-	           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.411);
-	           border-radius: 6px;
-	           display: block;
-	           padding: 10px;
-	           margin: 15px;
-	          }
-
-	          p {
-	           margin: 5px;
-	          }
 	          
+	    .crt {
+	        position: fixed;
+	        left: 0;
+	        top: 0;
+	        width: 100vw;
+	        height: 100vh;
+	        pointer-events: none;
+	        z-index: 999999999999999999999999999999999999999999999999999999999999;
+	        opacity: 0.05;
+	    }
+
+	    .crt:before {
+	        content: '';
+	        position: absolute;
+	        left: 0;
+	        top: 0;
+	        right: 0;
+	        bottom: 0;
+	        pointer-events: none;
+	        background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, .5) 51%);
+	        background-size: 100% 4px;
+	        will-change: background, background-size; animation: scanlines 0.2s linear infinite;
+	    }
+
+	    @keyframes scanlines {
+	        from {
+	        background: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, .5) 51%); background-size: 100% 5px; }
+	        to {
+	        background: linear-gradient(to bottom, rgba(0, 0, 0, .5) 50%, transparent 51%);
+	        background-size: 100% 4px;
+	        }
+	    }
+
+	    .wrapper {
+	        height: 100vh;
+	        /*This part is important for centering*/
+	        display: grid;
+	        place-items: left;
+	    }
+
+	    .typing-demo {
+	        width: 28ch;
+	        animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+	        white-space: nowrap;
+	        overflow: hidden;
+	        border-right: 0px solid;
+	    }
+
+	    @keyframes typing {
+	    from {
+	        width: 0
+	    }
+	    }
+
+	    @keyframes blink {
+	    50% {
+	        border-color: transparent
+	    }
+	    }
+
+	   body {
+	       background:linear-gradient(silver, darkgray);
+	       color: rgb(3,3,3);
+	       font-family: 'Ubuntu Mono', monospace;
+	       font-size: 14px;
+	       margin: 200px auto;
+	       opacity: 0;
+	       transition: opacity 3s; 
+	       height: 100vh;
+	   }
+
+	   a {
+	       color: black;
+	       text-decoration: underline;
+	   }
+
+	   a:hover {
+	       color: black;
+	       text-decoration: none;
+	       font-style: italic;
+	   }
+
+	   .box {
+	       background: rgba(255, 255, 255, 0.329);
+	       border-radius: 4px;
+	       padding: 20px;
+	       height: 820px;
+	       position: relative;
+	       flex-grow: 1;
+	       box-shadow: inset 0px 0px 40px rgba(255, 255, 255, 0.521), 0px 0px 15px rgba(0, 0, 0, 0.137);
+	       backdrop-filter: blur(10px);
+	       margin: auto;
+	       border: 2px solid rgba(134, 224, 60, 0.575)
+	   }
+
+	   .layout {
+	       width: 900px;
+	       margin: 0px auto;
+	       align-items: start;
+	   }
+
+	   .title {
+	       font-family: Inter, Helvetica, Arial, sans-serif;
+	       font-size: 36px;
+	       margin: 10px 0px;
+	       font-weight: bold;
+	       text-align: center;
+	   }
+
+	   .header {
+	       font-family: Inter, Helvetica, Arial, sans-serif;
+	       font-size: 20px;
+	       margin: 5px 0px;
+	       font-weight: bold;
+	       text-align: left;
+	   }
+
+	   #bgimg {
+	       position: fixed;
+	       z-index: -800;
+	       filter: brightness(100) blur(1px);
+	       display: block;
+	       left: 0px;
+	       top: 0px;
+	   }
+
+	   .userbox {
+	       margin: 10px auto;
+	       padding: 10px;
+	       color: rgb(36, 36, 36);
+	       font-style: normal;
+	       background: rgba(255, 255, 255, 0.568);
+	       border-radius: 3px;
+	       display: grid;
+	       place-items: left;
+	       text-align: left;
+	       /* box-shadow: 0px 0px 3px inset rgba(0, 0, 0, 0.384); */
+	   }
+
+	   .button {
+	       width: 100%;
+	       font-family: Inter, sans-serif;
+	       padding: 10px;
+	       border-radius: 20px;
+	       border: 0px solid black;
+	       background: rgba(255, 255, 255, 0.568);
+	       box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.24);
+	       margin: 5px auto;
+	       text-align: center;
+	       transition: 0.15s;
+	       border: 1px solid rgba(134, 224, 60, 0.575);
+	   }
+
+	   .button:hover {
+	       background: rgba(255, 255, 255, 0.884);
+	       box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.137);
+	   }
+
+	   .flex {
+	       display: flex;
+	       gap: 10px;
+	       justify-content: center;
+	   }
+
+	   .scrollbox {
+	        overflow: auto;
+	        color: rgb(83, 83, 83);
+	        background: rgba(255, 255, 255, 0.575);
+	        border-radius: 4px;
+	        padding: 10px;
+	        height: 260px;
+	        position: relative;
+	        flex-grow: 1;
+	        box-shadow: inset 0px 0px 40px rgba(255, 255, 255, 0.521);
+	        backdrop-filter: blur(10px);
+	        margin: auto;
+	        border: 1px solid rgba(134, 224, 60, 0.575);
+	   }
+
+	               /* width */
+	   ::-webkit-scrollbar {
+	   width: 10px;
+	   }
+
+	   /* Track */
+	   ::-webkit-scrollbar-track {
+	   background: #f1f1f100; 
+	   }
+
+	   /* Handle */
+	   ::-webkit-scrollbar-thumb {
+	   background: #818181; 
+	   border-radius: 3px;
+	   }
+
+	   /* Handle on hover */
+	   ::-webkit-scrollbar-thumb:hover {
+	   background: #707070; 
+	   }
+
+	   .profilebox {
+	    background: rgba(255, 255, 255, 0.26);
+	    border: 3px solid rgba(134, 224, 60, 0.575);
+	    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.411);
+	    border-radius: 6px;
+	    display: block;
+	    padding: 10px;
+	    margin: 15px;
+	   }
+
+	   p {
+	    margin: 5px;
+	   }
+	                   
 
 	</style>
 </head>
@@ -258,26 +259,37 @@
 
 		<div class="flex">
 			<div class="box" style="max-width: 20%;">
-				<a href=""><button class="button">Home</button></a> 
-                <a href=""><button class="button" disabled>ISEFeed</button></a>
-                <a href=""><button class="button" disabled>Mission Hub</button></a>
-                <hr>
-                <div class="profilebox" style="margin: 10px 0px; text-align: center">
-                    It is
-                    <div class="title">67°F & sunny</div>
-                    in Elysium!
-                </div>
-                <hr>
-                <a href=""><button class="button" disabled>TECHWARD Appointment Scheduler</button></a>
-                <a href=""><button class="button" disabled>DESIGNWARD Appointment Scheduler</button></a>
-                <a href=""><button class="button" disabled>MEDWARD Appointment Scheduler</button></a>
-                <a href=""><button class="button" disabled>RECORDS Appointment Scheduler</button></a>
-                <hr>
-                <a href=""><button class="button" disabled>Agent Directory</button></a>
-                <a href=""><button class="button" disabled>Universe Directory</button></a>
-                <a href=""><button class="button" disabled>Mission Assigning</button></a>
-                <hr>
-                <a href="/index"><button class="button">Login</button></a> 
+				<a href=""><button class="button">Home</button></a> <a href=
+				""><button class="button" disabled>ISEFeed</button></a> <a href=
+				""><button class="button" disabled>Mission Hub</button></a>
+
+				<hr>
+
+
+				<div class="profilebox" style="margin: 10px 0px; text-align: center">
+					It is
+
+					<div class="title">
+						67°F & sunny
+					</div>
+					in Elysium!
+				</div>
+
+				<hr>
+				<a href=""><button class="button" disabled>TECHWARD Appointment
+				Scheduler</button></a> <a href=""><button class="button" disabled
+				>DESIGNWARD Appointment Scheduler</button></a> <a href=""><button class=
+				"button" disabled>MEDWARD Appointment Scheduler</button></a> <a href=
+				""><button class="button" disabled>RECORDS Appointment
+				Scheduler</button></a>
+
+				<hr>
+				<a href=""><button class="button" disabled>Agent Directory</button></a>
+				<a href=""><button class="button" disabled>Universe Directory</button></a>
+				<a href=""><button class="button" disabled>Mission Assigning</button></a>
+
+				<hr>
+				<a href="/index"><button class="button">Login</button></a>
 			</div>
 
 
@@ -286,7 +298,8 @@
 					<div class="flex" style="gap: 40px;">
 						<div class="block" style="min-width: 20%; align-content: left"><img src=
 						"https://cdn.discordapp.com/attachments/981077126331654145/1150551389131509841/ezgif-4-e1886abe07.png"
-						style="border-radius: 50%; border: 3px solid rgba(134, 224, 60, 0.712);" width="150px">
+						style="border-radius: 50%; border: 3px solid rgba(134, 224, 60, 0.712);"
+						width="150px">
 						</div>
 
 
@@ -344,7 +357,9 @@
 					<br style="margin: 0px">
 					Revetment Academy for Gifted Seraphs is renowned across the isles of
 					Elysium as a factory for the best and bri╻☬ⰾ☛⫉⻦⦿Ⱍⲯ⇍⌞⍊Ⳛ⽺┉‰⿷Ⱑ⧖⨇...
-					<p></p>
+
+					<p>
+					</p>
 				</div>
 
 				<hr style="margin: 15px 0px">
@@ -358,13 +373,15 @@
 
 
 						<div class="scrollbox">
-							<div style="padding: 5px; background: rgb(145, 226, 78); color: white; border-radius: 4px;">
-                                <p><span style=
-                                    "font-weight: bold; font-family: Inter, Helvetica, Arial, sans-serif;">[
-                                    ! ] HUB BUGS & FIXES</span> As you've likely noticed, Fibrea is
-                                    currently down due to some bugs in our system. Some pages on the Hub may
-                                    be inaccessible as we fix the site. Thank you for your patience.</p>
-                            </div>
+							<div style=
+							"padding: 5px; background: rgb(145, 226, 78); color: white; border-radius: 4px;">
+								<p><span style=
+								"font-weight: bold; font-family: Inter, Helvetica, Arial, sans-serif;">[
+								! ] HUB BUGS & FIXES</span> As you've likely noticed, Fibrea is
+								currently down due to some bugs in our system. Some pages on the Hub
+								may be inaccessible as we fix the site. Thank you for your
+								patience.</p>
+							</div>
 
 							<hr>
 
@@ -399,26 +416,104 @@
 
 
 						<div class="scrollbox">
-                            <p>✧ Revise DESIGNWARD CASE#238401311 </p><hr>
-                            <p>✧ Report to Koppes for routine maintenance</p><hr>
-                            <p>✧ Revise TECHWARD CASE#845927482 </p><hr>
-                            <p>✧ Revise DESIGNWARD CASE#999128912 </p><hr>
-                            <p>✧ Invite Kokoro to outing with Nanako and Minako</p><hr>
-                            <p>✧ Visit Taki</p><hr>
-                            <p>✧ Revise MEDWARD CASE#9912128812912 </p><hr>
-                            <p>✧ Revise TECHWARD CASE#893248811019 </p><hr>
-                            <p>✧ Revise TECHWARD CASE#11732367188 </p><hr>
-                            <p>✧ Visit Priscilla</p><hr>
-                            <p>✧ Go home</p><hr>
-                            <p>Go home</p><hr>
-                            <p>✧Go hⰱme</p><hr>
-                            <p>G⡭② hom⓷</p><hr>
-                            <p>⨎⎿△ ho⽂e</p><hr>
-                            <p>⁥≨o ⯿‴✧</p><hr>
-                            <p>✡␛⫻Ɒ⢲ⱋ⒒ⰱ⢶⫍⯘⼆⢿⃯⊚</p><hr>
-                            <p>o ⯿o ⯿ⴕ⤕⪕▉⯿‴⻟⚆⡭②⤱␅</p><hr>
-                            <p>⚵⸂⸋□⨎⎿△↻H⿕⚅⣩↖o⽂me⁥≨</p><hr>
-                            <p>✧ Contact ⤕⪕▉⻟o ⯿⚆o ⯿</p><hr>
+							<p>✧ Revise DESIGNWARD CASE#238401311</p>
+
+							<hr>
+
+
+							<p>✧ Report to Koppes for routine maintenance</p>
+
+							<hr>
+
+
+							<p>✧ Revise TECHWARD CASE#845927482</p>
+
+							<hr>
+
+
+							<p>✧ Revise DESIGNWARD CASE#999128912</p>
+
+							<hr>
+
+
+							<p>✧ Invite Kokoro to outing with Nanako and Minako</p>
+
+							<hr>
+
+
+							<p>✧ Visit Taki</p>
+
+							<hr>
+
+
+							<p>✧ Revise MEDWARD CASE#9912128812912</p>
+
+							<hr>
+
+
+							<p>✧ Revise TECHWARD CASE#893248811019</p>
+
+							<hr>
+
+
+							<p>✧ Revise TECHWARD CASE#11732367188</p>
+
+							<hr>
+
+
+							<p>✧ Visit Priscilla</p>
+
+							<hr>
+
+
+							<p>✧ Go home</p>
+
+							<hr>
+
+
+							<p>Go home</p>
+
+							<hr>
+
+
+							<p>✧Go hⰱme</p>
+
+							<hr>
+
+
+							<p>G⡭② hom⓷</p>
+
+							<hr>
+
+
+							<p>⨎⎿△ ho⽂e</p>
+
+							<hr>
+
+
+							<p>⁥≨o ⯿‴✧</p>
+
+							<hr>
+
+
+							<p>✡␛⫻Ɒ⢲ⱋ⒒ⰱ⢶⫍⯘⼆⢿⃯⊚</p>
+
+							<hr>
+
+
+							<p>o ⯿o ⯿ⴕ⤕⪕▉⯿‴⻟⚆⡭②⤱␅</p>
+
+							<hr>
+
+
+							<p>⚵⸂⸋□⨎⎿△↻H⿕⚅⣩↖o⽂me⁥≨</p>
+
+							<hr>
+
+
+							<p>✧ Contact ⤕⪕▉⻟o ⯿⚆o ⯿</p>
+
+							<hr>
 						</div>
 					</div>
 
@@ -430,10 +525,9 @@
 
 
 						<div class="scrollbox">
-                            <p>
-                                You're all caught up!
-                            </p>
-                            <hr>
+							<p>You're all caught up!</p>
+
+							<hr>
 						</div>
 					</div>
 				</div>
@@ -441,13 +535,13 @@
 		</div>
 	</div>
 	<script>
-	   var clockElement = document.getElementById('clock');
+	            var clockElement = document.getElementById('clock');
 
-	function clock() {
-	   clockElement.textContent = new Date().toString();
-	}
+	         function clock() {
+	            clockElement.textContent = new Date().toString();
+	         }
 
-	setInterval(clock, 1000);
+	         setInterval(clock, 1000);
 	</script>
 </body>
 </html>
