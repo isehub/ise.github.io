@@ -108,6 +108,7 @@
 	              box-shadow: inset 0px 0px 40px rgba(255, 255, 255, 0.521), 0px 0px 15px rgba(0, 0, 0, 0.137);
 	              backdrop-filter: blur(10px);
 	              margin: auto;
+                  border: 2px solid rgba(134, 224, 60, 0.575)
 	          }
 
 	          .layout {
@@ -165,6 +166,7 @@
 	              margin: 5px auto;
 	              text-align: center;
 	              transition: 0.15s;
+                  border: 1px solid rgba(134, 224, 60, 0.575);
 	          }
 
 	          .button:hover {
@@ -189,11 +191,33 @@
 	               box-shadow: inset 0px 0px 40px rgba(255, 255, 255, 0.521);
 	               backdrop-filter: blur(10px);
 	               margin: auto;
+                   border: 1px solid rgba(134, 224, 60, 0.575);
 	          }
+
+              /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f100; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #818181; 
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #707070; 
+}
 
 	          .profilebox {
 	           background: rgba(255, 255, 255, 0.26);
-	           border: 3px outset rgba(134, 224, 60, 0.575);
+	           border: 3px solid rgba(134, 224, 60, 0.575);
 	           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.411);
 	           border-radius: 6px;
 	           display: block;
@@ -233,12 +257,27 @@
 
 
 		<div class="flex">
-			<div class="box" style="min-width: 20%;">
+			<div class="box" style="max-width: 20%;">
 				<a href=""><button class="button">Home</button></a> 
-                <a href=""><button class="button">sfsdf</button></a> 
-                <a href=""><button class="button">Placeholder Text</button></a>
-                <a href=""><button class="button">Placeholder Text</button></a>
-                <a href=""><button class="button">Placeholder Text</button></a>
+                <a href=""><button class="button" disabled>ISEFeed</button></a>
+                <a href=""><button class="button" disabled>Mission Hub</button></a>
+                <hr>
+                <div class="profilebox" style="margin: 10px 0px; text-align: center">
+                    It is
+                    <div class="title">67°F & sunny</div>
+                    in Elysium!
+                </div>
+                <hr>
+                <a href=""><button class="button" disabled>TECHWARD Appointment Scheduler</button></a>
+                <a href=""><button class="button" disabled>DESIGNWARD Appointment Scheduler</button></a>
+                <a href=""><button class="button" disabled>MEDWARD Appointment Scheduler</button></a>
+                <a href=""><button class="button" disabled>RECORDS Appointment Scheduler</button></a>
+                <hr>
+                <a href=""><button class="button" disabled>Agent Directory</button></a>
+                <a href=""><button class="button" disabled>Universe Directory</button></a>
+                <a href=""><button class="button" disabled>Mission Assigning</button></a>
+                <hr>
+                <a href="/index"><button class="button">Login</button></a> 
 			</div>
 
 
@@ -247,7 +286,7 @@
 					<div class="flex" style="gap: 40px;">
 						<div class="block" style="min-width: 20%; align-content: left"><img src=
 						"https://cdn.discordapp.com/attachments/981077126331654145/1150551389131509841/ezgif-4-e1886abe07.png"
-						style="border-radius: 50%;" width="150px">
+						style="border-radius: 50%; border: 3px solid rgba(134, 224, 60, 0.712);" width="150px">
 						</div>
 
 
@@ -319,7 +358,7 @@
 
 
 						<div class="scrollbox">
-							<div style="padding: 5px; background: rgb(228, 56, 56); color: white; border-radius: 4px;">
+							<div style="padding: 5px; background: rgb(145, 226, 78); color: white; border-radius: 4px;">
                                 <p><span style=
                                     "font-weight: bold; font-family: Inter, Helvetica, Arial, sans-serif;">[
                                     ! ] HUB BUGS & FIXES</span> As you've likely noticed, Fibrea is
@@ -391,6 +430,10 @@
 
 
 						<div class="scrollbox">
+                            <p>
+                                You're all caught up!
+                            </p>
+                            <hr>
 						</div>
 					</div>
 				</div>
