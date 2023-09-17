@@ -240,7 +240,7 @@
         margin: 5px;
         margin-bottom: 15px;
         padding: 5px;
-        width: 100%;
+        width: 200px;
         font-family: 'Courier New', 'Courier', monospace;
         color: limegreen;
     }
@@ -251,7 +251,7 @@
         margin: 5px;
         margin-bottom: 15px;
         padding: 5px;
-        width: 100%;
+        width: 200px;
         font-family: 'Courier New', 'Courier', monospace;
         color: limegreen;
     }
@@ -263,19 +263,37 @@
         text-align: left;
         padding: 20px;
     }
+
+    #warningbox {
+        width:450px;
+        padding: 10px;
+        background: limegreen;
+        color: black;
+        box-shadow: 0px 0px 5px limegreen;
+        text-align: center;
+        margin: 10px auto;
+    }
     
 
   </style>
 
+  <script>
+    function showAlert() {
+        alert("This page contains content that may be unsuitable for those with sensitivities to flickering images.");
+    }
+  </script>
+
 </head>
-<body class="crt">
-  
+<body class="crt" onload="showAlert()">
+    <div id="warningbox">
+        This site is best viewed on desktop, and is not optimized for mobile and tablet screens.
+    </div>
     <div id="centerbox">
         <p>
             > Welcome to the ISE's information terminal!
         </p>
 
-        <form>
+        <form align="center">
             <label for="fname">AGENT ID</label><br>
             <input type="text" id="fname" name="fname"><br>
             <label for="lname">PASSWORD</label><br>
