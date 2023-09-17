@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<title>ISE Information Terminal</title>
+	<meta content="width=device-width,initial-scale=0.5" name="viewport">
+	<meta content="" name="description">
+	<link href="favicon.png" rel="icon">
+
+    <link rel="stylesheet" href="crt.css">
+    <link rel="stylesheet" href="basicstyle.css">
+
+
+	<style>
+
+	input[type=text] {
+	background: none;
+	border: 1px dotted limegreen;
+	margin: 5px;
+	margin-bottom: 15px;
+	padding: 5px;
+	width: 200px;
+	font-family: 'Courier New', 'Courier', monospace;
+	color: limegreen;
+	}
+
+	input[type=password] {
+	background: none;
+	border: 1px dotted limegreen;
+	margin: 5px;
+	margin-bottom: 15px;
+	padding: 5px;
+	width: 200px;
+	font-family: 'Courier New', 'Courier', monospace;
+	color: limegreen;
+	}
+
+	#title {
+	font-size: 70px;
+	margin: 10px auto;
+	text-align: center;
+	width: 480px;
+	}
+
+	#centerbox {
+	width: 440px;
+	height: 200px;
+	margin: 0px auto;
+	text-align: center;
+	padding: 20px;
+	}
+
+	#warningbox {
+	width:450px;
+	padding: 10px;
+	background: limegreen;
+	color: black;
+	box-shadow: 0px 0px 5px limegreen;
+	text-align: center;
+	margin: 10px auto;
+	}
+
+
+	</style>
+	<script>
+	function showAlert() {
+	alert("This page contains content that may be unsuitable for those with sensitivities to flickering images. This page is optimized for desktop and may have issues when viewed on mobile and tablet. Please be wary.");
+	}
+	</script>
+</head>
+
+<body class="crt" onload="showAlert()">
+	<div id="title">
+		✦✦✦✦✦✦✦
+	</div>
+
+
+	<div id="centerbox">
+		<p>&gt; Welcome to the ISE's information terminal!</p>
+
+
+		<form align="center">
+			<label for="fname">AGENT ID</label><br>
+			<input id="fname" name="fname" type="text"><br>
+			<label for="lname">PASSWORD</label><br>
+			<input id="lname" name="lname" type="password">
+		</form>
+
+
+		<p>&gt; <a href="home.html">Log in?</a></p>
+	</div>
+</body>
+</html>
