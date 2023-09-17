@@ -1,0 +1,78 @@
+
+	* {
+	cursor: crosshair;
+	}
+
+	body {
+	background: black;
+	color: limegreen;
+	text-shadow: 2px 2px 5px limegreen, -2px -2px 5px limegreen;
+	margin: 100px auto;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: 'Courier New', 'Courier', monospace;
+	}
+
+	::selection {
+	background: limegreen;
+	color: black;
+	padding: 5px;
+	}
+
+	a {
+	color: limegreen;
+	text-shadow: 0px 0px 10px limegreen;
+	}
+
+	a:hover {
+	text-decoration: none;
+	}
+
+	.tooltip {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px dotted limegreen; /* If you want dots under the hoverable text */
+	}
+
+	.tooltip .tooltiptext {
+	visibility: hidden;
+	width: 100px;
+	background-color: black;
+	color: limegreen;
+	text-align: center;
+	padding: 5px 0;
+	font-size: 14px;
+	border: 1px dotted limegreen;
+	position: absolute;
+	top: 150%;
+	left: 50%;
+	margin-left: -50px;
+	z-index: 9999;
+	}
+
+	.tooltip:hover .tooltiptext {
+	visibility: visible;
+	cursor: select;
+	}
+
+	input[type=text] {
+	background: none;
+	border: 1px dotted limegreen;
+	margin: 5px;
+	margin-bottom: 15px;
+	padding: 5px;
+	width: 200px;
+	font-family: 'Courier New', 'Courier', monospace;
+	color: limegreen;
+	}
+
+	input[type=password] {
+	background: none;
+	border: 1px dotted limegreen;
+	margin: 5px;
+	margin-bottom: 15px;
+	padding: 5px;
+	width: 200px;
+	font-family: 'Courier New', 'Courier', monospace;
+	color: limegreen;
+	}
