@@ -37,6 +37,9 @@
 	color: limegreen;
 	}
 
+    p:before {
+        content:"> ";
+    }
 	#title {
 	font-size: 70px;
 	margin: 10px auto;
@@ -45,7 +48,6 @@
 	}
 
 	#centerbox {
-	width: 440px;
 	height: 200px;
 	margin: 0px auto;
 	text-align: center;
@@ -53,7 +55,7 @@
 	}
 
 	#warningbox {
-	width:450px;
+	width: 450px;
 	padding: 10px;
 	background: limegreen;
 	color: black;
@@ -62,34 +64,22 @@
 	margin: 10px auto;
 	}
 
+    #title {
+        text-align: center;
+    }
+
 
 	</style>
-	<script>
-	function showAlert() {
-	alert("This page contains content that may be unsuitable for those with sensitivities to flickering images. This page is optimized for desktop and may have issues when viewed on mobile and tablet. Please be wary.");
-	}
-	</script>
+	
 </head>
 
-<body class="crt" onload="showAlert()">
-	<div id="title">
-		✦✦✦✦✦✦✦
-	</div>
+<body class="crt">
 
+    <div id="centerbox">
+        <div id="title">404!</div>
+        <p>The page you're looking for is either under construction, or does not exist.</p>
+        <p><a href="">Go back?</a></p>
+    </div>
 
-	<div id="centerbox">
-		<p>&gt; Welcome to the ISE's information terminal!</p>
-
-
-		<form align="center">
-			<label for="fname">AGENT ID</label><br>
-			<input id="fname" name="fname" type="text"><br>
-			<label for="lname">PASSWORD</label><br>
-			<input id="lname" name="lname" type="password">
-		</form>
-
-
-		<p>&gt; <a href="home.html">Log in?</a></p>
-	</div>
 </body>
 </html>
