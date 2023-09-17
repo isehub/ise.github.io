@@ -41,6 +41,39 @@
 	color: limegreen;
 	}
 
+    #cbox {
+	left: 40px;
+	bottom: -300px;
+	z-index: 10;
+	position: fixed;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	padding: 0px;
+	width: 200px;
+	}
+
+	#cbox:hover {
+	bottom: 0px;
+	}
+
+	#cboxtitle {
+	width: 190px;
+	height: 25px;
+	border: 1px dotted limegreen;
+	padding: 5px 10px;
+	text-align: center;
+	font-size: 18px;
+	}
+
+	#cboxbody {
+	border: 1px dotted limegreen;
+	padding: 0px;
+	width: 210px;
+	}
+
 	#title {
 	font-size: 70px;
 	margin: 10px auto;
@@ -49,7 +82,7 @@
 	}
 
 	#centerbox {
-	width: 440px;
+	width: 600px;
 	height: 200px;
 	margin: 0px auto;
 	text-align: center;
@@ -68,14 +101,23 @@
 
 
 	</style>
-	<script>
-	function showAlert() {
-	alert("This page contains content that may be unsuitable for those with sensitivities to flickering images. This page is optimized for desktop and may have issues when viewed on mobile and tablet. Please be wary.");
-	}
-	</script>
+	
 </head>
 
-<body class="crt" onload="showAlert()">
-Welcome.
+<body class="crt">
+    
+    <div id="cbox">
+		<div id="cboxtitle">
+		Ask Fibrea
+		</div>
+		<div id="cboxbody">
+			<iframe allow="autoplay" allowtransparency="yes" frameborder="0" height=
+			"300px" marginheight="0" marginwidth="0" scrolling="auto" src=
+			"https://www3.cbox.ws/box/?boxid=3531808&boxtag=bHbsMb" width=
+			"210px"></iframe>
+		</div>
+	</div>
+
+    <p> Hello. Welcome.</p>
 </body>
 </html>
