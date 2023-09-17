@@ -1,315 +1,154 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>ISE Information Terminal</title>
-  <meta name="viewport" content="width=device-width,initial-scale=0.5" />
-  <meta name="description" content="" />
-  <link rel="icon" href="favicon.png">
+	<meta charset="UTF-8">
 
-  <style>
-    @keyframes flicker {
-  0% {
-    opacity: 0.27861;
-  }
-  5% {
-    opacity: 0.34769;
-  }
-  10% {
-    opacity: 0.23604;
-  }
-  15% {
-    opacity: 0.90626;
-  }
-  20% {
-    opacity: 0.18128;
-  }
-  25% {
-    opacity: 0.83891;
-  }
-  30% {
-    opacity: 0.65583;
-  }
-  35% {
-    opacity: 0.67807;
-  }
-  40% {
-    opacity: 0.26559;
-  }
-  45% {
-    opacity: 0.84693;
-  }
-  50% {
-    opacity: 0.96019;
-  }
-  55% {
-    opacity: 0.08594;
-  }
-  60% {
-    opacity: 0.20313;
-  }
-  65% {
-    opacity: 0.71988;
-  }
-  70% {
-    opacity: 0.53455;
-  }
-  75% {
-    opacity: 0.37288;
-  }
-  80% {
-    opacity: 0.71428;
-  }
-  85% {
-    opacity: 0.70419;
-  }
-  90% {
-    opacity: 0.7003;
-  }
-  95% {
-    opacity: 0.36108;
-  }
-  100% {
-    opacity: 0.24387;
-  }
-}
-@keyframes textShadow {
-  0% {
-    text-shadow: 0.4389924193300864px 0 1px rgba(0,30,255,0.5), -0.4389924193300864px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  5% {
-    text-shadow: 2.7928974010788217px 0 1px rgba(0,30,255,0.5), -2.7928974010788217px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  10% {
-    text-shadow: 0.02956275843481219px 0 1px rgba(0,30,255,0.5), -0.02956275843481219px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  15% {
-    text-shadow: 0.40218538552878136px 0 1px rgba(0,30,255,0.5), -0.40218538552878136px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  20% {
-    text-shadow: 3.4794037899852017px 0 1px rgba(0,30,255,0.5), -3.4794037899852017px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  25% {
-    text-shadow: 1.6125630401149584px 0 1px rgba(0,30,255,0.5), -1.6125630401149584px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  30% {
-    text-shadow: 0.7015590085143956px 0 1px rgba(0,30,255,0.5), -0.7015590085143956px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  35% {
-    text-shadow: 3.896914047650351px 0 1px rgba(0,30,255,0.5), -3.896914047650351px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  40% {
-    text-shadow: 3.870905614848819px 0 1px rgba(0,30,255,0.5), -3.870905614848819px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  45% {
-    text-shadow: 2.231056963361899px 0 1px rgba(0,30,255,0.5), -2.231056963361899px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  50% {
-    text-shadow: 0.08084290417898504px 0 1px rgba(0,30,255,0.5), -0.08084290417898504px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  55% {
-    text-shadow: 2.3758461067427543px 0 1px rgba(0,30,255,0.5), -2.3758461067427543px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  60% {
-    text-shadow: 2.202193051050636px 0 1px rgba(0,30,255,0.5), -2.202193051050636px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  65% {
-    text-shadow: 2.8638780614874975px 0 1px rgba(0,30,255,0.5), -2.8638780614874975px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  70% {
-    text-shadow: 0.48874025155497314px 0 1px rgba(0,30,255,0.5), -0.48874025155497314px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  75% {
-    text-shadow: 1.8948491305757957px 0 1px rgba(0,30,255,0.5), -1.8948491305757957px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  80% {
-    text-shadow: 0.0833037308038857px 0 1px rgba(0,30,255,0.5), -0.0833037308038857px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  85% {
-    text-shadow: 0.09769827255241735px 0 1px rgba(0,30,255,0.5), -0.09769827255241735px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  90% {
-    text-shadow: 3.443339761481782px 0 1px rgba(0,30,255,0.5), -3.443339761481782px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  95% {
-    text-shadow: 2.1841838852799786px 0 1px rgba(0,30,255,0.5), -2.1841838852799786px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  100% {
-    text-shadow: 2.6208764473832513px 0 1px rgba(0,30,255,0.5), -2.6208764473832513px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-}
-.crt::after {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: rgba(18, 16, 16, 0.1);
-  opacity: 0;
-  z-index: 2;
-  pointer-events: none;
-  animation: flicker 0.15s infinite;
-}
-.crt::before {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-  z-index: 2;
-  background-size: 100% 2px, 3px 100%;
-  pointer-events: none;
-}
-.crt {
-  animation: textShadow 1.6s infinite;
-}
-  </style>
+	<title>ISE Information Terminal</title>
+	<meta content="width=device-width,initial-scale=0.5" name="viewport">
+	<meta content="" name="description">
+	<link href="favicon.png" rel="icon">
 
-  <style>
+    <link rel="stylesheet" href="crt.css">
 
-    @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+	<style>
 
-    * {
-        cursor: crosshair;
-    }
+	@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 
-    body {
-        background: black;
-        color: limegreen;
-        text-shadow: 2px 2px 5px limegreen, -2px -2px 5px limegreen;
-        margin: 100px auto;
-        font-size: 16px;
-        font-weight: bold;
-        font-family: 'Courier New', 'Courier', monospace;
-    }
+	* {
+	cursor: crosshair;
+	}
 
-    ::selection {
-        background: limegreen;
-        color: black;
-        padding: 5px;
-    }
+	body {
+	background: black;
+	color: limegreen;
+	text-shadow: 2px 2px 5px limegreen, -2px -2px 5px limegreen;
+	margin: 100px auto;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: 'Courier New', 'Courier', monospace;
+	}
 
-    a {
-        color: limegreen;
-        text-shadow: 0px 0px 10px limegreen;
-    }
+	::selection {
+	background: limegreen;
+	color: black;
+	padding: 5px;
+	}
 
-    a:hover {
-        text-decoration: none;
-    }
+	a {
+	color: limegreen;
+	text-shadow: 0px 0px 10px limegreen;
+	}
 
-    /* Tooltip container */
-    .tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted limegreen; /* If you want dots under the hoverable text */
-    }
+	a:hover {
+	text-decoration: none;
+	}
 
-    /* Tooltip text */
-    .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 100px;
-    background-color: black;
-    color: limegreen;
-    text-align: center;
-    padding: 5px 0;
-    font-size: 14px;
-    border: 1px dotted limegreen;
-    position: absolute;
-    top: 150%;
-    left: 50%;
-    margin-left: -50px;
-    z-index: 9999;
-    }
+	/* Tooltip container */
+	.tooltip {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px dotted limegreen; /* If you want dots under the hoverable text */
+	}
 
-    /* Show the tooltip text when you mouse over the tooltip container */
-    .tooltip:hover .tooltiptext {
-    visibility: visible;
-    cursor: select;
-    }
+	/* Tooltip text */
+	.tooltip .tooltiptext {
+	visibility: hidden;
+	width: 100px;
+	background-color: black;
+	color: limegreen;
+	text-align: center;
+	padding: 5px 0;
+	font-size: 14px;
+	border: 1px dotted limegreen;
+	position: absolute;
+	top: 150%;
+	left: 50%;
+	margin-left: -50px;
+	z-index: 9999;
+	}
 
-    input[type=text] {
-        background: none;
-        border: 1px dotted limegreen;
-        margin: 5px;
-        margin-bottom: 15px;
-        padding: 5px;
-        width: 200px;
-        font-family: 'Courier New', 'Courier', monospace;
-        color: limegreen;
-    }
-    
-    input[type=password] {
-        background: none;
-        border: 1px dotted limegreen;
-        margin: 5px;
-        margin-bottom: 15px;
-        padding: 5px;
-        width: 200px;
-        font-family: 'Courier New', 'Courier', monospace;
-        color: limegreen;
-    }
+	/* Show the tooltip text when you mouse over the tooltip container */
+	.tooltip:hover .tooltiptext {
+	visibility: visible;
+	cursor: select;
+	}
 
-    #title {
-        font-size: 70px;
-        margin: 10px auto;
-        text-align: center;
-        width: 480px;
-    }
+	input[type=text] {
+	background: none;
+	border: 1px dotted limegreen;
+	margin: 5px;
+	margin-bottom: 15px;
+	padding: 5px;
+	width: 200px;
+	font-family: 'Courier New', 'Courier', monospace;
+	color: limegreen;
+	}
 
-    #centerbox {
-        width: 440px;
-        height: 200px;
-        margin: 0px auto;
-        text-align: left;
-        padding: 20px;
-    }
+	input[type=password] {
+	background: none;
+	border: 1px dotted limegreen;
+	margin: 5px;
+	margin-bottom: 15px;
+	padding: 5px;
+	width: 200px;
+	font-family: 'Courier New', 'Courier', monospace;
+	color: limegreen;
+	}
 
-    #warningbox {
-        width:450px;
-        padding: 10px;
-        background: limegreen;
-        color: black;
-        box-shadow: 0px 0px 5px limegreen;
-        text-align: center;
-        margin: 10px auto;
-    }
-    
+	#title {
+	font-size: 70px;
+	margin: 10px auto;
+	text-align: center;
+	width: 480px;
+	}
 
-  </style>
+	#centerbox {
+	width: 440px;
+	height: 200px;
+	margin: 0px auto;
+	text-align: center;
+	padding: 20px;
+	}
 
-  <script>
-    function showAlert() {
-        alert("This page contains content that may be unsuitable for those with sensitivities to flickering images. This page is optimized for desktop and may have issues when viewed on mobile and tablet. Please be wary.");
-    }
-  </script>
+	#warningbox {
+	width:450px;
+	padding: 10px;
+	background: limegreen;
+	color: black;
+	box-shadow: 0px 0px 5px limegreen;
+	text-align: center;
+	margin: 10px auto;
+	}
 
+
+	</style>
+	<script>
+	function showAlert() {
+	alert("This page contains content that may be unsuitable for those with sensitivities to flickering images. This page is optimized for desktop and may have issues when viewed on mobile and tablet. Please be wary.");
+	}
+	</script>
 </head>
+
 <body class="crt" onload="showAlert()">
-    <div id="title">
-        ✦✦✦✦✦✦✦
-    </div>
-    <div id="centerbox">
-        <p>
-            > Welcome to the ISE's information terminal!
-        </p>
+	<div id="title">
+		✦✦✦✦✦✦✦
+	</div>
 
-        <form align="center">
-            <label for="fname">AGENT ID</label><br>
-            <input type="text" id="fname" name="fname"><br>
-            <label for="lname">PASSWORD</label><br>
-            <input type="password" id="lname" name="lname">
-        </form>
 
-        <p>
-            > <a href="home.html">Log in?</a>
-        </p>
-    </div>
+	<div id="centerbox">
+		<p>&gt; Welcome to the ISE's information terminal!</p>
 
+
+		<form align="center">
+			<label for="fname">AGENT ID</label><br>
+			<input id="fname" name="fname" type="text"><br>
+			<label for="lname">PASSWORD</label><br>
+			<input id="lname" name="lname" type="password">
+		</form>
+
+
+		<p>&gt; <a href="home.html">Log in?</a></p>
+	</div>
 </body>
 </html>
