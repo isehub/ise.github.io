@@ -14,126 +14,46 @@
 
 
 	<style>
-
-	input[type=text] {
-	background: none;
-	border: 1px dotted limegreen;
-	margin: 5px;
-	margin-bottom: 15px;
-	padding: 5px;
-	width: 200px;
-	font-family: 'Courier New', 'Courier', monospace;
-	color: limegreen;
-	}
-
-	input[type=password] {
-	background: none;
-	border: 1px dotted limegreen;
-	margin: 5px;
-	margin-bottom: 15px;
-	padding: 5px;
-	width: 200px;
-	font-family: 'Courier New', 'Courier', monospace;
-	color: limegreen;
-	}
-
-    #cbox {
-	right: 40px;
-	bottom: -355px;
-	z-index: 10;
-	position: fixed;
-	-webkit-transition: all 0.3s ease-in-out;
-	-moz-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-	-ms-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
-	padding: 0px;
-	width: 350px;
-	text-shadow: 2px 2px 5px limegreen, -2px -2px 5px limegreen;
-	box-shadow: 2px 2px 5px rgba(50, 205, 50, 0.3), -2px -2px 5px rgba(50, 205, 50, 0.3);
-	}
-
-	#cbox:hover {
-	bottom: 0px;
-	}
-
-	#cboxtitle {
-	width: 330px;
-	height: 25px;
-	border: 1px dotted limegreen;
-	padding: 5px 10px;
-	text-align: center;
-	font-size: 18px;
-	background: black;
-	}
-
-    #cboxdesc {
-	border: 1px dotted limegreen;
-	padding: 10px;
-    height: 30px;
-	width: 330px;
-    font-size: 14px;
-    text-align: center;
-	background: black;
-	}
-
-	#cboxbody {
-	border: 1px dotted limegreen;
-	padding: 0px;
-	width: 350px;
-	}
     
     p:before {
         content: "";
     }
 
-	#title {
-	font-size: 70px;
-	margin: 10px auto;
-	text-align: center;
-	width: 480px;
-	}
-
-    h2:before {
-        content: "> "
-    }
-
-	#centerbox {
-        height: 400px;
-        width: 90%;
-        margin: 50px auto;
-        text-align: center;
-        padding: 20px;
-        border: 1px dotted limegreen;
-	}
-
-    iframe {
-        width: 100%;
-        height: 100%;
-        border: 1px dotted limegreen;
-    }
-
-    #sidebar {
-        position: fixed;
-        top: -160px;
-        left: 25px;
-        padding: 15px;
-        word-wrap: break-word;
-        width: 200px;
-        background: rgba(50, 205, 50, 0.23);
-		box-shadow: 0px 0px 20px rgba(50, 205, 50, 0.363);
-        transition: 0.3s;
-        text-align: center;
-    }
-
-    #sidebar:hover {
-        top: 0;
-    }
-
     body {
-        margin: 0px auto;
-        width: 600px;
+        margin: 20px auto;
+        max-width: 850px;
+		font-weight: normal;
     }
+
+	.profilebox {
+		display: flex;
+		margin: 25px auto;
+		gap: 15px;
+		width: 820px;
+		height: 550px;
+		border: 0px dotted limegreen;
+		box-shadow: 0px 0px 3px limegreen;
+		padding: 15px;
+	}
+
+	h1 {
+		font-size: 45px;
+		font-weight: normal;
+		margin: 0px;
+	}
+
+	h2 {
+		margin: 0px;
+		font-size: 24px;
+	}
+
+	.title {
+		font-size: 60px;
+	}
+
+	br {
+		margin: 0px;
+	}
 
 
 	</style>
@@ -142,9 +62,119 @@
 
 <body>
 
-    <p>Let's make something beautiful!</p>
-    <h2>Something Beautiful</h2>
-    <img src="https://files.catbox.moe/rp024v.png">
+	<div class="title">EXECUTIVE</div>
+	
+	<!-- beginning of profilebox -->
+	<div class="profilebox">
+		<div>
+			<img height=100% src="https://files.catbox.moe/4yjgly.png">
+		</div>
+		<div>
+			<h1>THE CHAIRWOMAN</h1>
+			<h2>Fname Lname | ✦✦✦✦✦✦✦ Class</h2>
+			<p>HEIGHT: </p>
+			<p>HAIR: </p>
+			<p>EYES: </p>
+			<p>SPECIES: </p>
+			<p>GENDER: </p>
+			<p>AGE: </p>
+
+			<br>
+
+			<p>OCCUPATION: </p>
+			<p>AFFILIATION: </p>
+			<p>HOBBIES: </p>
+
+			<br>
+
+			<p>BIO: </p>
+		</div>
+	</div>
+	<!-- end of profilebox -->
+
+	<!-- beginning of profilebox -->
+	<div class="profilebox">
+		<div>
+			<img height=100% src="https://files.catbox.moe/4yjgly.png">
+		</div>
+		<div>
+			<h1>THE ARCHIVIST</h1>
+			<h2>Fname Lname | ✦✦✦✦✦✦✦ Class</h2>
+			<p>HEIGHT: </p>
+			<p>HAIR: </p>
+			<p>EYES: </p>
+			<p>SPECIES: </p>
+			<p>GENDER: </p>
+			<p>AGE: </p>
+
+			<br>
+
+			<p>OCCUPATION: </p>
+			<p>AFFILIATION: </p>
+			<p>HOBBIES: </p>
+
+			<br>
+
+			<p>BIO: </p>
+		</div>
+	</div>
+	<!-- end of profilebox -->
+
+	<!-- beginning of profilebox -->
+	<div class="profilebox">
+		<div>
+			<img height=100% src="https://files.catbox.moe/4yjgly.png">
+		</div>
+		<div>
+			<h1>THE SAGE</h1>
+			<h2>Fname Lname | ✦✦✦✦✦✦✦ Class</h2>
+			<p>HEIGHT: </p>
+			<p>HAIR: </p>
+			<p>EYES: </p>
+			<p>SPECIES: </p>
+			<p>GENDER: </p>
+			<p>AGE: </p>
+
+			<br>
+
+			<p>OCCUPATION: </p>
+			<p>AFFILIATION: </p>
+			<p>HOBBIES: </p>
+
+			<br>
+
+			<p>BIO: </p>
+		</div>
+	</div>
+	<!-- end of profilebox -->
+
+	<!-- beginning of profilebox -->
+	<div class="profilebox">
+		<div>
+			<img height=100% src="https://files.catbox.moe/4yjgly.png">
+		</div>
+		<div>
+			<h1>THE ADMINISTRATOR</h1>
+			<h2>Fname Lname | ✦✦✦✦✦✦✦ Class</h2>
+			<p>HEIGHT: </p>
+			<p>HAIR: </p>
+			<p>EYES: </p>
+			<p>SPECIES: </p>
+			<p>GENDER: </p>
+			<p>AGE: </p>
+
+			<br>
+
+			<p>OCCUPATION: </p>
+			<p>AFFILIATION: </p>
+			<p>HOBBIES: </p>
+
+			<br>
+
+			<p>BIO: </p>
+		</div>
+	</div>
+	<!-- end of profilebox -->
 
 </body>
 </html>
