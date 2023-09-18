@@ -40,7 +40,7 @@
 	background-color: black;
 	color: limegreen;
 	text-align: center;
-	padding: 5px 0;
+	padding: 5px;
 	font-size: 14px;
 	border: 1px dotted limegreen;
 	position: absolute;
@@ -76,3 +76,15 @@
 	font-family: 'Courier New', 'Courier', monospace;
 	color: limegreen;
 	}
+
+	h1 {
+        margin: 0px;
+    }
+
+    details > summary {
+    list-style-type: '> ';
+    }
+
+    details[open] > summary {
+        list-style-type: 'V ';
+    }
