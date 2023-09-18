@@ -1,4 +1,6 @@
 
+	@import url('https://fonts.googleapis.com/css2?family=Kosugi&display=swap');
+	
 	* {
 	cursor: url(https://files.catbox.moe/21q3yh.cur), auto !important;
 	}
@@ -80,6 +82,27 @@
 	h1 {
         margin: 0px;
     }
+
+		/* width */
+	::-webkit-scrollbar {
+		width: 10px;
+	}
+	
+	/* Track */
+	::-webkit-scrollbar-track {
+		background: rgba(50, 205, 50, 0.459);
+	}
+	
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		background: black;
+		border: 1px solid limegreen;
+	}
+	
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+		background: limegreen;
+	}
 
     details > summary {
     list-style-type: '> ';
