@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<title>ISE Information Terminal</title>
+	<meta content="width=device-width,initial-scale=0.5" name="viewport">
+	<meta content="" name="description">
+	<link href="favicon.png" rel="icon">
+
+    <link rel="stylesheet" href="crt.css">
+    <link rel="stylesheet" href="basicstyle.css">
+
+
+	<style>
+    p:before {
+        content: "";
+    }
+
+	#title {
+	font-size: 70px;
+	margin: 10px auto;
+	text-align: center;
+	width: 480px;
+	}
+
+	#centerbox {
+        height: 650px;
+        width: 900px;
+        margin: 100px auto;
+        text-align: center;
+        padding: 20px;
+	}
+
+    iframe{
+        width: 100%;
+        border: 0px dotted rgba(50, 205, 50, 0.5);
+        z-index: -1;
+    }
+
+    #sidebar {
+        position: fixed;
+        top: -285px;
+        left: 25px;
+        padding: 15px;
+        word-wrap: break-word;
+        width: 200px;
+        background: rgba(0, 0, 0, 0.75);
+        border: 1px dotted limegreen;
+        border-top: 0px;
+		box-shadow: 0px 0px 20px rgba(50, 205, 50, 0.363);
+        transition: 0.3s;
+        text-align: center;
+    }
+
+    #sidebar:hover {
+        top: 0;
+    }
+
+    #sidebar:target {
+        top: 0;
+    }
+
+
+	</style>
+
+    <script>
+        function resizeiframe(obj) {
+        obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+        }
+    </script>
+	
+</head>
+
+<body >
+
+    <div id="sidebar" class="crt">
+        <h1 align="center">LUMEA</h1>
+        
+        <p><a target="agents" href="/underconstruction.html">THE WINGS</a></p>
+        <p><a target="agents" href="/underconstruction.html">DUNYADEPPAN PROPER</a></p>
+        <p><a target="agents" href="/underconstruction.html">CHURCH OF SANCTITY'S GRIP</a></p>
+        <p><a target="agents" href="/underconstruction.html">ACADEMY OF THE ARMS</a></p>
+        <p><a target="agents" href="/underconstruction.html">SHIMABUKURO SHRINE</a></p>
+
+        <br>
+
+        <p><a href="/home.html">Go home?</a></p>
+
+        <h1 align="center">✦✦✦✦✦✦✦</h1>
+        
+    </div>
+
+    <div id="centerbox" >
+        <iframe id="agents" src="/underconstruction.html" name="agents" frameborder="0" scrolling="no" onload="resizeiframe(this)"></iframe>
+    </div>
+</body>
+</html>
